@@ -83,8 +83,6 @@ links_imagem = []
 
 # Loop para iterar sobre os resultados
 for idx, resultado in enumerate(resultados, start=1):
-    # Seu código para extrair os dados...
-
     
     titulo = resultado.get('titulo', 'N/A') 
     preco = resultado.get('preco', 'N/A') 
