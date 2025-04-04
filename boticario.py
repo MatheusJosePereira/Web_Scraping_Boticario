@@ -20,7 +20,7 @@ url = f'https://www.boticario.com.br/busca?q={produto}'
 # Abre a URL no navegador
 navegador.get(url)
 
-# Aceita cookies se necessário
+# Aceita cookies
 try:
     wait = WebDriverWait(navegador, 10)
     botao_aceitar_cookies = wait.until(EC.element_to_be_clickable((By.ID, 'onetrust-accept-btn-handler')))
@@ -85,8 +85,8 @@ links_imagem = []
 for idx, resultado in enumerate(resultados, start=1):
     # Seu código para extrair os dados...
 
-    # Exemplo: Se 'resultado' for um dicionário, você pode acessar as chaves assim:
-    titulo = resultado.get('titulo', 'N/A')  # 'N/A' é um valor padrão caso 'titulo' não esteja presente
+    
+    titulo = resultado.get('titulo', 'N/A') 
     preco = resultado.get('preco', 'N/A') 
     avaliacao = resultado.get('avaliacao', 'N/A')  
     url_imagem = resultado.get('link_imagem', 'N/A')
